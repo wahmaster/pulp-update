@@ -68,7 +68,7 @@ def remiEL6():
 	"""Does a pulp-admin sync of remi EL5"""
 	sudo('pulp-admin rpm repo sync run --repo-id=remi-el6')
 
-def pulpUpdatAll():
+def AllPulpUpdats():
 	"""Does a pulp-admin sync of everything"""
 	centos6Updates()
 	puppetlabsProductsStage()
