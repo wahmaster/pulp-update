@@ -20,9 +20,6 @@ env.key_filename = '/opt/fabric/.ssh/Monkey'
 env.ssh_config_path = '/opt/fabric/ssh_config'
 
 def centos6():
-  """Does a pulp-admin sync of centos6_updates"""
+	"""Does a pulp-admin sync of centos6_updates"""
 	sudo('pulp-admin rpm repo sync run --repo-id=centos6_updates')
-	if result.failed:
-    abort(red("pulp-admin command failed."))
-  else:
-    print(green("Success!"))
+
