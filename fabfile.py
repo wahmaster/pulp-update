@@ -52,6 +52,10 @@ def datastax():
 	"""Does a pulp-admin sync of datastax"""
 	sudo('pulp-admin rpm repo sync run --repo-id=datastax')
 
+def rabbitmq():
+	"""Does a pulp-admin sync of datastax"""
+	sudo('pulp-admin rpm repo sync run --repo-id=rabbitmq')
+
 def puppetlabsProductsEL6():
 	"""Does a pulp-admin sync of puppetlabs products EL6"""
 	sudo('pulp-admin rpm repo sync run --repo-id=puppetlabs-products-EL6')
@@ -67,6 +71,22 @@ def centos6():
 def remiEL6():
 	"""Does a pulp-admin sync of remi EL5"""
 	sudo('pulp-admin rpm repo sync run --repo-id=remi-el6')
+
+def centos7Base():
+	"""Does a pulp-admin sync of centos7 Base"""
+	sudo('pulp-admin rpm repo sync run --repo-id=centos7-base')
+
+def centos7Updates():
+	"""Does a pulp-admin sync of centos7 Updates"""
+	sudo('pulp-admin rpm repo sync run --repo-id=centos7-updates')
+
+def centos7Extras():
+	"""Does a pulp-admin sync of centos7 Extras"""
+	sudo('pulp-admin rpm repo sync run --repo-id=centos7-extras')
+
+def centos7Plus():
+	"""Does a pulp-admin sync of centos7 Plus"""
+	sudo('pulp-admin rpm repo sync run --repo-id=centos7-plus')
 
 def loginPulp():
 	"""Logs into pulp"""
@@ -89,3 +109,8 @@ def AllPulpUpdates():
 	puppetlabsDependenciesEL6()
 	centos6()
 	remiEL6()
+    centos7Base()
+    centos7Updates()
+    centos7Extras()
+    centos7Plus()
+    rabbitmq()
