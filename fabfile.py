@@ -77,16 +77,32 @@ def centos7Base():
 	sudo('pulp-admin rpm repo sync run --repo-id=centos7-base')
 
 def centos7Updates():
-	"""Does a pulp-admin sync of centos7 Updates"""
+	"""Does a pulp-admin sync of centos 7 updates"""
 	sudo('pulp-admin rpm repo sync run --repo-id=centos7-updates')
 
 def centos7Extras():
-	"""Does a pulp-admin sync of centos7 Extras"""
+	"""Does a pulp-admin sync of centos 7 Extras"""
 	sudo('pulp-admin rpm repo sync run --repo-id=centos7-extras')
 
 def centos7Plus():
 	"""Does a pulp-admin sync of centos7 Plus"""
 	sudo('pulp-admin rpm repo sync run --repo-id=centos7-plus')
+
+def nginxCentos6():
+	"""Does a pulp-admin sync of Nginx centos 6"""
+	sudo('pulp-admin rpm repo sync run --repo-id=nginx-centos-6-x86_64')
+
+def puppetPciEl6():
+	"""Does a pulp-admin sync of puppet PCI EL 6"""
+	sudo('pulp-admin rpm repo sync run --repo-id=puppet-pc1-el6')
+
+def puppetPciEl7():
+	"""Does a pulp-admin sync of centos7 Plus"""
+	sudo('pulp-admin rpm repo sync run --repo-id=puppet-pc1-el7')
+
+def sensuEl7():
+	"""Does a pulp-admin sync of sensu EL7"""
+	sudo('pulp-admin rpm repo sync run --repo-id=sensu-el7')
 
 def loginPulp():
 	"""Logs into pulp"""
@@ -114,3 +130,8 @@ def AllPulpUpdates():
 	centos7Plus()
 	rabbitmq()
 	remiEL6()
+	nginxCentos6()
+	puppetPciEl6()
+	puppetPciEl7()
+	sensuEl7()
+	
