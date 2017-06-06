@@ -150,6 +150,6 @@ def AllPulpUpdates():
 	puppetPciEl6()
 	puppetPciEl7()
 	sensuEl7()
-    cent7basetest()
-    newrelicinfrael6()
+	cent7basetest()
+	newrelicinfrael6()
 
