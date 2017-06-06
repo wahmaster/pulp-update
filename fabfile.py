@@ -104,6 +104,22 @@ def sensuEl7():
 	"""Does a pulp-admin sync of sensu EL7"""
 	sudo('pulp-admin rpm repo sync run --repo-id=sensu-el7')
 
+def cent7basetest():
+	"""Does a pulp-admin sync of cent7-base-test"""
+	sudo('pulp-admin rpm repo sync run --repo-id=cent7-base-test')
+
+def newrelicinfrael6():
+	"""Does a pulp-admin sync of newrelic_infra_el6"""
+	sudo('pulp-admin rpm repo sync run --repo-id=newrelic_infra_el6')
+
+def nginxcent7():
+	"""Does a pulp-admin sync of nginx-cent-7"""
+	sudo('pulp-admin rpm repo sync run --repo-id=nginx-cent-7')
+
+def nginxcent6():
+	"""Does a pulp-admin sync of nginx-cent-6"""
+	sudo('pulp-admin rpm repo sync run --repo-id=nginx-cent-6')
+
 def loginPulp():
 	"""Logs into pulp"""
 	sudo('pulp-admin login --username=admin --password=IT@B.comRul3z!')
@@ -134,4 +150,6 @@ def AllPulpUpdates():
 	puppetPciEl6()
 	puppetPciEl7()
 	sensuEl7()
-	
+    cent7basetest()
+    newrelicinfrael6()
+
