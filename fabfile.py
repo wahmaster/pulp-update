@@ -152,4 +152,6 @@ def AllPulpUpdates():
 	sensuEl7()
 	cent7basetest()
 	newrelicinfrael6()
+	nginxcent7()
+	nginxcent6()
 
